@@ -1,0 +1,10 @@
+<h1 class="title">Private page</h1>
+<span class="title"
+  >Welcome {{ $profile()?.firstName }} {{ $profile()?.lastName }}</span
+>
+<p class="status-text">This is a protected route</p>
+
+<a routerLink="/">Back to main</a>
+<button (click)="logout()">Logout</button>
+
+<pre>{{ $profile() | json }}</pre>

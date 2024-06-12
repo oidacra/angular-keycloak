@@ -1,0 +1,19 @@
+<h1 class="title">Main page</h1>
+
+@if ($isLoggedIn()) {
+  <h3>Welcome {{ $userName() }} !</h3>
+
+  <ul>
+    <li><a routerLink="/private">Go to private route (My Profile)</a></li>
+    <li><a routerLink="/public">Go to public route</a></li>
+  </ul>
+
+  <button (click)="logout()">Logout</button>
+} @else {
+  <h3>Welcome strange!</h3>
+  <ul>
+    <li><a routerLink="/public">Go to public route</a></li>
+  </ul>
+
+  <button (click)="loginPage()">Login</button>
+}
